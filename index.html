@@ -20,7 +20,6 @@
             position: relative;
         }
 
-        /* Enhanced background with image and gradient overlay */
         body::before {
             content: "";
             position: fixed;
@@ -129,7 +128,8 @@
         function shareMessage() {
             const name = document.getElementById("nameInput").value.trim();
             const greeting = "🌳 वट सावित्री व्रत की हार्दिक शुभकामनाएं!\nइस पावन व्रत पर माँ सावित्री की कृपा आप पर बनी रहे,\nसुख, समृद्धि और सौभाग्य आपके जीवन में हमेशा रहे।";
-            const fullMessage = name ? `प्रिय ${name},\n${greeting}` : greeting;
+            const siteLink = "\n\n🌐 अधिक जानकारी के लिए देखें:\nhttps://vat-savitri-2025.vercel.app/";
+            const fullMessage = name ? `प्रिय ${name},\n${greeting}${siteLink}` : `${greeting}${siteLink}`;
             const url = "https://wa.me/?text=" + encodeURIComponent(fullMessage);
             window.open(url, '_blank');
         }
@@ -151,4 +151,4 @@
         </div>
     </div>
 </body>
-</html>
+            </html>
